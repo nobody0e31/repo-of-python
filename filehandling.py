@@ -1,0 +1,8 @@
+f = open('data.txt','r')
+c = f.read()
+print(c) 
+f.close()
+f = open ('data.txt', 'w')
+c = f.write("hello")
+print(c)
+f.close()
