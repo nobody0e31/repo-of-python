@@ -3,24 +3,25 @@ student_list = []
 num_students = int(input())
 
 for i in range(num_students):
+
     name = input()
     score = float(input())
-    # FIX 1: Moved inside the loop (indented) so it saves EVERY student
-    student_list.append([name, score])
+
+    student_list.append([name,score])
 
 scores_only = []
 
 for student in student_list:
-    # FIX 2: Fixed the typo so 'student' matches the loop variable
     scores_only.append(student[1])
-
-# FIX 3: Moved these lines OUTSIDE the loop (un-indented) 
-# because we only need to sort once at the very end.
 unique_scores_set = set(scores_only)
+
 unique_scores_list = list(unique_scores_set)
+
 unique_scores_list.sort()
 
 second_lowest = unique_scores_list[1]
 
-# Just to test if it works:
-print("The second lowest score is:", second_lowest)
+
+
+
+print("the second lowest score is :", second_lowest)
